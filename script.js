@@ -15,5 +15,6 @@ function calculateRisk() {
   const positionSize = riskAmount / (stopLossPercent * leverage);
   console.log(positionSize);
 
-  document.getElementById('result').innerText = `Position Size: $${positionSize.toFixed(2)}`;
+  const pos2 = positionSize / entryPrice * leverage;
+  document.getElementById('result').innerText = `Position Size: $${positionSize.toFixed(2)} or ${pos2.toFixed(5)} CONT QTY`;
 }
